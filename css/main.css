@@ -1,0 +1,21 @@
+#title, #subtitle{
+  text-align: center;
+}
+
+.btn {
+  margin-left: 90px;
+}
+
+.grid {
+  height: 180px;
+  border-radius: 10px;
+  border: solid black 3px;
+}
+
+.grids {
+  margin-top: 10px;
+}
+
+.matched {
+	border: solid red 3px;
+}
