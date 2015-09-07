@@ -30,22 +30,24 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-$(document).ready(function() {
-	//when one square is clicked, background is assigned and revealed
-	$('.grid').click(function() {
-		if ($(this).css('background-image') === 'none') {
-			var randomNum = getRandomInt(0, arr.length-1);
-			$(this).css('background-image', arr[randomNum]);
-			arr.splice[randomNum,0];
-		}
-	});
-	//once background is assigned, it cannot change
-	//when a second square is clicked 
-	//if the backgrounds match, then the squares stay revealed and lock
-	//else both backgrounds return to being hidden
-	//when all backgrounds are revealed, the game is won
+//assign each square a background and hide it by setting its size to 0
+$(".grid").each(function() {
+	var randomNum = getRandomInt(0, arr.length-1);
+	$(this).css('background-image', 'url('+arr[randomNum]+')');
+	$(this).css('background-size', '0 0');
+	arr.splice(randomNum,1);
+})
 
-}); //end ready function
+//when a square is clicked reveal its background
+$(".grid").click(function() {
+	$(this).css('background-size', '');
+})
+
+//once background is assigned, it cannot change
+//when a second square is clicked 
+//if the backgrounds match, then the squares stay revealed and lock
+//else both backgrounds return to being hidden
+//when all backgrounds are revealed, the game is won
 
 
 
