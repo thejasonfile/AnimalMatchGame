@@ -10,6 +10,7 @@
   height: 180px;
   border-radius: 10px;
   border: solid black 3px;
+  background-color: grey;
 }
 
 .grids {
@@ -19,4 +20,8 @@
 
 .matched {
 	border: solid red 3px;
+}
+
+.hiddenimage {
+	background-size: 0 0;
 }

@@ -34,13 +34,13 @@ function getRandomInt(min, max) {
 $(".grid").each(function() {
 	var randomNum = getRandomInt(0, arr.length-1);
 	$(this).css('background-image', 'url('+arr[randomNum]+')');
-	$(this).css('background-size', '0 0');
+	$(this).addClass('hiddenimage');
 	arr.splice(randomNum,1);
 })
 
 //when a square is clicked reveal its background
 $(".grid").click(function() {
-	$(this).css('background-size', '');
+	$(this).toggleClass('hiddenimage');
 })
 
 //once background is assigned, it cannot change
