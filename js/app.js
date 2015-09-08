@@ -38,17 +38,35 @@ $(".grid").each(function() {
 	arr.splice(randomNum,1);
 })
 
-//when a square is clicked reveal its background
+//when a square is clicked
 $(".grid").click(function() {
-	$(this).toggleClass('hiddenimage');
-})
-
-//once background is assigned, it cannot change
-//when a second square is clicked 
-//if the backgrounds match, then the squares stay revealed and lock
-//else both backgrounds return to being hidden
-//when all backgrounds are revealed, the game is won
-
-
-
-
+	if (!($(this).hasClass("matchedimage"))) {
+		//reveal its background image and toggle classes
+		$(this).toggleClass('hiddenimage').toggleClass('revealedimage');
+		//determine number of squares that have been revealed but not matched
+		var revealedSquares = $("div.revealedimage").length;
+		if (revealedSquares === 2) {
+			var firstSquare = $($('div.revealedimage')[0]).attr("style")
+			var secondSquare = $($('div.revealedimage')[1]).attr("style")
+			//if second square has been clicked, test to see if backgrounds match
+			if (firstSquare === secondSquare) {
+				//if backgrounds match, change class to matched
+				$("div.revealedimage").each(function() {
+					$(this).removeClass("revealedimage").addClass("matchedimage");
+				})
+				//determine if any unmatched squares remain
+				var matchedSquares = $("div.matchedimage").length;
+				//if no unmatched squares remain, then the game is over
+				if (matchedSquares === $(".grid").length) {
+					alert("You have matched all the squares!  Congratulations!")
+				}
+			} else {
+				//if backgrounds do not match, hide the backgrounds
+				alert("That's not a match.  Try again");
+				$("div.revealedimage").each(function() {
+					$(this).removeClass("revealedimage").addClass("hiddenimage");
+				})
+			}	
+		}
+	}
+}); //end click
