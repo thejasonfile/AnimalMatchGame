@@ -1,72 +1,187 @@
+//arrays of animal pics used for grid backgrounds
 var puppies = [
-				"http://www.soft3k.com/imgs/Precious-Puppies-Screensaver-w300-8723.jpg",
-				"http://www.soft3k.com/imgs/Precious-Puppies-Screensaver-w300-8723.jpg",
-				"http://www.soft3k.com/imgs/Precious-Puppies-Screensaver-w300-8723.jpg",
-				"http://www.soft3k.com/imgs/Precious-Puppies-Screensaver-w300-8723.jpg",
-			 	"http://englishbulldog-dogs.com/wp-content/uploads/2013/07/200x200.jpg",
-			 	"http://englishbulldog-dogs.com/wp-content/uploads/2013/07/200x200.jpg",
-			 	"http://englishbulldog-dogs.com/wp-content/uploads/2013/07/200x200.jpg",
-			 	"http://englishbulldog-dogs.com/wp-content/uploads/2013/07/200x200.jpg",
-			 	"http://www.northridgewest.org/wp-content/uploads/2012/09/puppies-nwnc-200x200.jpg",
-			 	"http://www.northridgewest.org/wp-content/uploads/2012/09/puppies-nwnc-200x200.jpg",
-			 	"http://www.northridgewest.org/wp-content/uploads/2012/09/puppies-nwnc-200x200.jpg",
-			 	"http://www.northridgewest.org/wp-content/uploads/2012/09/puppies-nwnc-200x200.jpg",
-			 	"http://dog-training-whisperer.com/wp-content/uploads/1-dta-normanack-3904600662-200x200.jpg",
-			 	"http://dog-training-whisperer.com/wp-content/uploads/1-dta-normanack-3904600662-200x200.jpg",
-			 	"http://dog-training-whisperer.com/wp-content/uploads/1-dta-normanack-3904600662-200x200.jpg",
-			 	"http://dog-training-whisperer.com/wp-content/uploads/1-dta-normanack-3904600662-200x200.jpg"
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/puppies4.jpg",
 ];
 
-var arr = puppies;
+var kittens = [
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/kittens4.jpg",
 
-//when one of the buttons is clicked, the backgrounds array changes to the appropriate animal and backgrounds are hidden
-$('.puppiesbtn').click(function(){
-	return arr = puppies;
-})
+];
 
+var fish = [
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/fish4.jpg",
+];
 
-//generates random number for background pic
+var birds = [
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds1.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds2.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds3.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds4.jpg",
+				"https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/birds4.jpg",
+
+];
+
+//empty staging array used so that original arrays aren't changed
+var stagingArray = [];
+var objectArray = [];
+var revealedSquares = [];
+var indexArray = [];
+var matchedSquares = 0;
+
+function resetVars() {
+	objectArray = [];
+	revealedSquares = [];
+	indexArray = [];
+	matchedSquares = 0;
+}
+
+//function to set staging array
+function setArray(arr) {
+	for (i=0; i<arr.length; i++) {
+		stagingArray[i] = arr[i];
+	}
+	setBackgrounds();
+};
+
+//generates random number for second background pic
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//assign each square a background and hide it by setting its size to 0
-$(".grid").each(function() {
-	var randomNum = getRandomInt(0, arr.length-1);
-	$(this).css('background-image', 'url('+arr[randomNum]+')');
-	$(this).addClass('hiddenimage');
-	arr.splice(randomNum,1);
+//crete grid objects
+function gridObject() {
+	this.firstbackground = 'url("./images/pawprint.png")';
+	this.revealed = false;
+	this.matched = false;
+}
+
+//set default staging array to puppies
+setArray(puppies);
+
+//loop through each grid creating a gridObject for each assigning the secondbackground, then adding that secondbackground to the grid's CSS
+function setBackgrounds() {
+	for (i=0; i<16; i++) {
+		var randomNum = getRandomInt(0, stagingArray.length-1);
+		objectArray[i] = new gridObject();
+		objectArray[i].secondbackground = 'url('+stagingArray[randomNum]+')';
+		stagingArray.splice(randomNum,1);
+		$($(".grid")[i]).css('background-image', objectArray[i].firstbackground+','+objectArray[i].secondbackground);
+	}
+	return objectArray;
+}
+
+//when one of the buttons is clicked, the backgrounds array changes to the appropriate animal and backgrounds are hidden
+$('.puppiesbtn').click(function(){
+	resetVars();
+	setArray(puppies);
+})
+$('.kittensbtn').click(function(){
+	resetVars();
+	setArray(kittens);
+})
+$('.fishbtn').click(function(){
+	resetVars();
+	setArray(fish);
+})
+$('.birdsbtn').click(function(){
+	resetVars();
+	setArray(birds);
 })
 
-//when a square is clicked
+//when a grid is clicked
 $(".grid").click(function() {
-	if (!($(this).hasClass("matchedimage"))) {
-		//reveal its background image and toggle classes
-		$(this).toggleClass('hiddenimage').toggleClass('revealedimage');
-		//determine number of squares that have been revealed but not matched
-		var revealedSquares = $("div.revealedimage").length;
-		if (revealedSquares === 2) {
-			var firstSquare = $($('div.revealedimage')[0]).attr("style")
-			var secondSquare = $($('div.revealedimage')[1]).attr("style")
-			//if second square has been clicked, test to see if backgrounds match
-			if (firstSquare === secondSquare) {
-				//if backgrounds match, change class to matched
-				$("div.revealedimage").each(function() {
-					$(this).removeClass("revealedimage").addClass("matchedimage");
-				})
-				//determine if any unmatched squares remain
-				var matchedSquares = $("div.matchedimage").length;
-				//if no unmatched squares remain, then the game is over
+	//set index value
+	var index = ($(".grid").index(this));
+	if (!(objectArray[index].matched)) {
+		$(this).addClass('animated flipInY');
+		//reveal its background
+		$(this).css('background-image', objectArray[index].secondbackground);
+		//add it to the revealed squares array
+		revealedSquares[revealedSquares.length] = $(this);
+		//add its index to the indexArray
+		indexArray[indexArray.length] = index;
+		//change objects revealed property to true
+		objectArray[index].revealed = true;
+		//check to see if it is the first or second square revealed
+		if (revealedSquares.length === 2) {
+			//check to see if the backgrounds match
+			if ($(revealedSquares[0]).attr('style') === $(revealedSquares[1]).attr('style')) {
+				//if they match, increase matched squares by 2, clear revealed squares, change objects matched property to true
+				matchedSquares += 2;
+				revealedSquares = [];
+				objectArray[indexArray[0]].matched = true;
+				objectArray[indexArray[1]].matched = true;
+				indexArray = [];
+				//check to see if all squares are matched
 				if (matchedSquares === $(".grid").length) {
-					alert("You have matched all the squares!  Congratulations!")
+				alert ("You've matched all of the squares!");
 				}
 			} else {
-				//if backgrounds do not match, hide the backgrounds
-				alert("That's not a match.  Try again");
-				$("div.revealedimage").each(function() {
-					$(this).removeClass("revealedimage").addClass("hiddenimage");
-				})
-			}	
+				//reset backgrounds and else clear revealed squares and change objects revealed property to false
+				alert("Not a match!");
+				$(revealedSquares[0]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
+				$(revealedSquares[1]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
+				revealedSquares = [];
+				objectArray[indexArray[0]].revealed = false;
+				objectArray[indexArray[1]].revealed = false;
+				indexArray = [];
+			}
 		}
 	}
-}); //end click
+}) //end click

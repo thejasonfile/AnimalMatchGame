@@ -1,3 +1,7 @@
+body {
+  background-color: #e3e3e3;
+}
+
 #title, #subtitle{
   text-align: center;
 }
@@ -6,29 +10,22 @@
   margin-left: 90px;
 }
 
+.grids {
+  margin-top: 2em;
+  margin-left: 15em;
+}
+
 .grid {
   height: 180px;
   border-radius: 10px;
   border: solid black 3px;
-}
-
-.grids {
-  margin-top: 2em;
-  margin-left: 15em;
+  background-size: cover;
 }
 
 .matched {
 	border: solid red 3px;
 }
 
-.hiddenimage {
-	background-size: 0 0;
-}
-
 .revealedimage {
 	background-size;
-}
-
-.matchedimage {
-	background-color: red;
 }
