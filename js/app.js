@@ -80,13 +80,13 @@ var birds = [
 //empty staging array used so that original arrays aren't changed
 var stagingArray = [];
 var objectArray = [];
-var revealedSquares = [];
+var lockedSquares = [];
 var indexArray = [];
 var matchedSquares = 0;
 
 function resetVars() {
 	objectArray = [];
-	revealedSquares = [];
+	lockedSquares = [];
 	indexArray = [];
 	matchedSquares = 0;
 }
@@ -106,8 +106,8 @@ function getRandomInt(min, max) {
 
 //crete grid objects
 function gridObject() {
-	this.firstbackground = 'url("./images/pawprint.png")';
-	this.revealed = false;
+	this.firstbackground = 'url("https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/pawprint.png")';
+	this.locked = false;
 	this.matched = false;
 }
 
@@ -148,39 +148,52 @@ $('.birdsbtn').click(function(){
 $(".grid").click(function() {
 	//set index value
 	var index = ($(".grid").index(this));
-	if (!(objectArray[index].matched)) {
+	if (!(objectArray[index].matched) && !(objectArray[index].locked)) {
 		$(this).addClass('animated flipInY');
 		//reveal its background
 		$(this).css('background-image', objectArray[index].secondbackground);
-		//add it to the revealed squares array
-		revealedSquares[revealedSquares.length] = $(this);
+		//add it to the locked squares array
+		lockedSquares[lockedSquares.length] = $(this);
 		//add its index to the indexArray
 		indexArray[indexArray.length] = index;
-		//change objects revealed property to true
-		objectArray[index].revealed = true;
+		//change objects locked property to true
+		objectArray[index].locked = true;
 		//check to see if it is the first or second square revealed
-		if (revealedSquares.length === 2) {
+		if (lockedSquares.length === 2) {
 			//check to see if the backgrounds match
-			if ($(revealedSquares[0]).attr('style') === $(revealedSquares[1]).attr('style')) {
-				//if they match, increase matched squares by 2, clear revealed squares, change objects matched property to true
+			if ($(lockedSquares[0]).attr('style') === $(lockedSquares[1]).attr('style')) {
+				//if they match, increase matched squares by 2, clear locked squares, change objects matched property to true
 				matchedSquares += 2;
-				revealedSquares = [];
+				lockedSquares = [];
 				objectArray[indexArray[0]].matched = true;
 				objectArray[indexArray[1]].matched = true;
 				indexArray = [];
 				//check to see if all squares are matched
 				if (matchedSquares === $(".grid").length) {
-				alert ("You've matched all of the squares!");
+				$("#status").html("<button class='btn-success'>You've mactched all the sqaures!!!</button>");
+				$(".btn-success").css('visibility', 'visible').addClass('animated bounceInDown');
 				}
 			} else {
-				//reset backgrounds and else clear revealed squares and change objects revealed property to false
-				alert("Not a match!");
-				$(revealedSquares[0]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
-				$(revealedSquares[1]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
-				revealedSquares = [];
-				objectArray[indexArray[0]].revealed = false;
-				objectArray[indexArray[1]].revealed = false;
-				indexArray = [];
+				//display message, lock all squares
+				$("#status").html("<button class='btn-danger'>Not a match.  Try again!<br><span>Click here to continue...</span></button>")
+				$(".btn-danger").css('visibility', 'visible').addClass('animated bounceInDown');
+				for (i=0; i<objectArray.length; i++) {
+					objectArray[i].locked = true;
+				}
+				//reset backgrounds and else clear revealed squares and change objects locked property to false
+				$(".btn-danger").click(function() {
+					$(this).css('visibility', 'hidden').removeClass('bounceInDown');
+					$(lockedSquares[0]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
+					$(lockedSquares[1]).css('background-image', objectArray[index].firstbackground).removeClass('animated flipInY');
+					for (i=0; i<objectArray.length; i++) {
+						objectArray[i].locked = false;
+					}
+					lockedSquares = [];
+					objectArray[indexArray[0]].revealed = false;
+					objectArray[indexArray[1]].revealed = false;
+					indexArray = [];
+				})
+				
 			}
 		}
 	}
