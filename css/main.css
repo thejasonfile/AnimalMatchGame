@@ -1,8 +1,13 @@
 body {
-  background-color: #e3e3e3;
+  background-image: url("https://dl.dropboxusercontent.com/u/755079/images/animalflipgame/symphony.png");
+  font-family: Helvetica, sans-serif;
 }
 
-#title, #subtitle{
+#title {
+  font-family: 'Mystery Quest', cursive;
+}
+
+#title, #status{
   text-align: center;
 }
 
@@ -12,7 +17,7 @@ body {
 
 .grids {
   margin-top: 2em;
-  margin-left: 15em;
+  margin-left: 13em;
 }
 
 .grid {
@@ -22,10 +27,11 @@ body {
   background-size: cover;
 }
 
-.matched {
-	border: solid red 3px;
+.btn-danger, .btn-success {
+  font-size: 1.5em;
+  border-radius: 15px;
 }
 
-.revealedimage {
-	background-size;
+.btn-danger span {
+  font-size: 0.5em;
 }
